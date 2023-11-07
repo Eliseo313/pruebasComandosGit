@@ -1,0 +1,56 @@
+*{  
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden; /* Ocultar scroll */
+    text-align: center;
+    font-family: "Segoe UI";
+    color: #F6F1F1;
+    height: 100vh; /* 100% de la altura de la ventana */
+    background-image: url('../img/fondo.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+}
+.header{
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+.contenedor{
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Para que la imagen se ajuste al ancho del contenedor */
+    margin-bottom: 20px;
+}
+.img{
+    width: 150px;
+    height: 150px;
+}
+.circulo{
+    position: absolute;
+    top: 48%; /* Puedes ajustar la posición vertical */
+    left: 50%; /* Puedes ajustar la posición horizontal */
+    transform: translate(-50%, -50%); /* Centra el icono */
+}
+.correo{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.btn{
+    background-color: #F6F1F1;
+    color: #146C94;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 150px;
+    font-family: "Segoe UI";
+    font-size: 15px;
+    box-shadow: 2px 2px 2px 2px #146C94;
+}
+.btn:hover{
+    background-color: #146C94;
+    color: #F6F1F1;
+}

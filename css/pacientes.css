@@ -1,0 +1,231 @@
+*{  
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(360deg, #AFD3E2 0%, #F6F1F1 60%);
+    height: 100vh; /* 100% de la altura de la ventana */
+}
+
+/* ESTILOS PARA LA BARRA DE NAVEGACION */
+.navbar {
+    background-color: #146C94;
+    font-family: "Segoe UI";
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+/* Estilos para el menú hamburguesa */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    justify-content: center;
+}
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #F6F1F1;
+    margin: 3px 0;
+}
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.nav-item {
+    position: relative;
+    cursor: pointer;
+    color: #F6F1F1;
+    padding: 20px;   
+}
+.nav-item:hover{
+    background-color: #19A7CE;
+    border-radius: 5px;
+}
+.img{
+    width: 50px;
+    height: 50px;
+}
+
+/* @media para el menu hamburguesa y la barra de navegacion*/
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+    .nav-list {
+        display: none;
+    }
+    /* Estilos para mostrar el menú desplegable */
+    .nav-list.active {
+        display: flex;
+        flex-direction: column;
+        background-color: #146C94;
+        position: absolute;
+        top: 60px;
+    }
+    .nav-list.active .nav-item {
+        text-align: left;
+        margin-right: 10px;
+    }
+    .nav-list.active .sub-menu {
+        display: none;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+}
+
+/* Codigo del sub-menu */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #AFD3E2;
+    list-style: none;
+    width: 220px;
+    border-radius: 5px;
+}
+.sub-menu a{
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+}
+.sub-menu a:hover{
+    background-color: #146C94;
+    color: #F6F1F1;
+}
+.nav-item:hover .sub-menu {
+    display: block;
+}
+.busqueda {
+    display: flex;
+    align-items: center;
+    color: #F6F1F1;
+    cursor: pointer;
+}
+input {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #F6F1F1;
+    font-family: "Segoe UI";
+    font-size: 15px;
+}
+/* Media Queries para hacer responsiva la barra de navegacion*/
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+    }
+    .busqueda {
+        display: flex;
+    }
+}
+/* Media Queries para hacer responsivo el submenú */
+@media (max-width: 768px) {
+    .sub-menu {
+        position: static;
+        display: none;
+    }
+}
+
+
+/* ESTILOS DEL CUERPO */
+.barra {
+    background-color: #19A7CE;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.titulo {
+    font-family: "Segoe UI";
+    margin: 5px;
+    color: #F6F1F1;
+}
+.iconos {
+    padding: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+.buscar{
+    display: flex;
+    align-items: center;
+}
+
+input[type="search"] {
+    border: none;
+    padding: 5px;
+}
+
+/* Agrega estilos para hacer que los íconos sean más pequeños en pantallas pequeñas */
+@media (max-width: 768px) {
+    .barra{
+        justify-content: center;
+    }
+    .iconos svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    input[type="search"] {
+        width: 100%;
+    }
+    .contenedorIconos{
+        flex-direction: column;
+    }
+}
+
+/* ESTILOS PARA LAS TARJETAS */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.card {
+    background-color: #AFD3E2;
+    box-shadow: 0 2px 4px #146C94;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    justify-content: space-around;
+    display: flex; 
+    align-items: center; 
+    
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.imgCard{
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+.text{
+    color: #146C94;
+    font-family: "Segoe UI";
+    font-size: 18px;
+    font-weight: bold; /* Esto hará que el texto sea negritas */
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .tarjetas {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+
+

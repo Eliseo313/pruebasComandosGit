@@ -1,0 +1,227 @@
+*{  
+    margin: 0;
+    padding: 0;
+}
+.fondo{
+    background: linear-gradient(360deg, #AFD3E2 0%, #F6F1F1 80%);
+    overflow: hidden; /* Ocultar scroll */
+}
+main{
+    height: 100vh; /* 100% de la altura de la ventana */
+}
+/* Estilos para la barra de navegacion */
+.navbar {
+    background-color: #146C94;
+    font-family: "Segoe UI";
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+/* Estilos para el menú hamburguesa */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    justify-content: center;
+}
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #F6F1F1;
+    margin: 3px 0;
+}
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.nav-item {
+    position: relative;
+    cursor: pointer;
+    color: #F6F1F1;
+    padding: 20px;   
+}
+.nav-item:hover{
+    background-color: #19A7CE;
+    border-radius: 5px;
+}
+.img{
+    width: 50px;
+    height: 50px;
+}
+
+/* @media para el menu hamburguesa y la barra de navegacion*/
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+    .nav-list {
+        display: none;
+    }
+    /* Estilos para mostrar el menú desplegable */
+    .nav-list.active {
+        display: flex;
+        flex-direction: column;
+        background-color: #146C94;
+        position: absolute;
+        top: 60px;
+    }
+    .nav-list.active .nav-item {
+        text-align: left;
+        margin-right: 10px;
+    }
+    .nav-list.active .sub-menu {
+        display: none;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+}
+
+/* Codigo del sub-menu */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #AFD3E2;
+    list-style: none;
+    width: 220px;
+    border-radius: 5px;
+}
+.sub-menu a{
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+}
+.sub-menu a:hover{
+    background-color: #146C94;
+    color: #F6F1F1;
+}
+.nav-item:hover .sub-menu {
+    display: block;
+}
+.busqueda {
+    display: flex;
+    align-items: center;
+    color: #F6F1F1;
+    cursor: pointer;
+}
+input {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #F6F1F1;
+    font-family: "Segoe UI";
+    font-size: 15px;
+}
+
+
+/* Media Queries para hacer responsiva la barra de navegacion*/
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+    }
+    .busqueda {
+        display: flex;
+    }
+}
+
+/* Media Queries para hacer responsivo el submenú */
+@media (max-width: 768px) {
+    .sub-menu {
+        position: static;
+        display: none;
+    }
+}
+
+/* AQUI EMPIEZAN LOS ESTILOS PARA EL CUERPO */
+.citas{
+    font-family: "Segoe UI";
+    text-align: center;
+    color: #146C94;
+}
+
+table {
+    font-family: "Segoe UI";
+    font-size: 15px;
+    background-color: #F6F1F1;
+    color: #146C94;
+    cursor: text;
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+    width: 90%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 2px solid #146C94;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    background-color: #19A7CE;
+    color: #F6F1F1;
+}
+/* Media Queries para hacer la tabla responsiva */
+@media (max-width: 600px) {
+    th, td {
+        padding: 4px; /* Reduce el espacio entre celdas en pantallas pequeñas */
+    }
+
+    th {
+        font-size: 12px; /* Reduce el tamaño de fuente de los encabezados */
+    }
+}
+
+.botones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+}
+a{
+    text-decoration: none;
+}
+.btn{
+    font-family: "Segoe UI";
+    font-size: 18px;
+    background-color: #AFD3E2;
+    color: #146C94;
+    box-shadow: 2px 2px 2px #146C94;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+.btn:hover{
+    background-color: #19A7CE;
+    color: #F6F1F1;
+}
+.iconoBtn{
+    margin-right: 10px;
+}
+
+/*AQUI EMPIEZAN LOS ESTILOS PARA EL FOOTER*/
+.footer{
+    font-family: "Segoe UI";
+    font-size: 18px;
+    text-align: center;
+    color: #146C94;
+}
+.footer textarea{
+    background-color: #F6F1F1;
+    width: 90%;
+    border-radius: 10px;
+    border: 2px solid #146C94;
+}
+
+
+
