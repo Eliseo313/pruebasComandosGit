@@ -49,91 +49,101 @@ foreach ($citasSemanaActual as $cita) {
 
     $horario[$horaCita][$diaCita] = $nombrePaciente . ' - ' . $motivoCita;
 }
-
-include 'includes/templates/barraNavegacion.php';
 ?>
+<!DOCTYPE html>
+<html lang="es" class="fondo">
 
-<main>
-    <section>
-        <h2 class="citas">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-notebook" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#146C94" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18" />
-                <path d="M13 8l2 0" />
-                <path d="M13 12l2 0" />
-            </svg>
-            CITAS DE LA SEMANA
-        </h2>
-        <table>
-            <tr>
-                <th>Hora</th>
-                <th>Lunes</th>
-                <th>Martes</th>
-                <th>Miércoles</th>
-                <th>Jueves</th>
-                <th>Viernes</th>
-            </tr>
-            <?php
-            foreach ($horario as $hora => $dias) {
-                echo '<tr>';
-                echo '<td>' . $hora . '</td>';
-                foreach (array('Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes') as $dia) {
-                    echo '<td>' . (isset($dias[$dia]) ? $dias[$dia] : '') . '</td>';
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal</title>
+    <link rel="stylesheet" href="css/paginaPrincipal.css">
+    <script src="menuHamburguesa.js"></script>
+</head>
+
+<body>
+<?php include 'includes/templates/barraNavegacion.php'; ?>
+    <main>
+        <section>
+            <h2 class="citas">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-notebook" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#146C94" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18" />
+                    <path d="M13 8l2 0" />
+                    <path d="M13 12l2 0" />
+                </svg>
+                CITAS DE LA SEMANA
+            </h2>
+            <table>
+                <tr>
+                    <th>Hora</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                </tr>
+                <?php
+                foreach ($horario as $hora => $dias) {
+                    echo '<tr>';
+                    echo '<td>' . $hora . '</td>';
+                    foreach (array('Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes') as $dia) {
+                        echo '<td>' . (isset($dias[$dia]) ? $dias[$dia] : '') . '</td>';
+                    }
+                    echo '</tr>';
                 }
-                echo '</tr>';
-            }
-            ?>
-        </table>
-    </section>
-
-    <div class="botones">
-        <section>
-            <a href="">
-                <button class="btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" class=" iconoBtn icon icon-tabler icon-tabler-calendar-plus" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#146C94" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M12.5 21h-6.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v5" />
-                        <path d="M16 3v4" />
-                        <path d="M8 3v4" />
-                        <path d="M4 11h16" />
-                        <path d="M16 19h6" />
-                        <path d="M19 16v6" />
-                    </svg>
-                    Agendar Cita
-                </button>
-            </a>
+                ?>
+            </table>
         </section>
 
-        <section>
-            <a href="">
-                <button class="btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="iconoBtn icon icon-tabler icon-tabler-user-plus" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#146C94" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
-                        <path d="M16 19h6" />
-                        <path d="M19 16v6" />
-                        <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
-                    </svg>
-                    Nuevo Paciente
-                </button>
-            </a>
-        </section>
-    </div>
+        <div class="botones">
+            <section>
+                <a href="">
+                    <button class="btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class=" iconoBtn icon icon-tabler icon-tabler-calendar-plus" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#146C94" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12.5 21h-6.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v5" />
+                            <path d="M16 3v4" />
+                            <path d="M8 3v4" />
+                            <path d="M4 11h16" />
+                            <path d="M16 19h6" />
+                            <path d="M19 16v6" />
+                        </svg>
+                        Agendar Cita
+                    </button>
+                </a>
+            </section>
 
-    <footer class="footer">
-        <h3>
-            Pendientes
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil-plus" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#146C94" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
-                <path d="M13.5 6.5l4 4" />
-                <path d="M16 19h6" />
-                <path d="M19 16v6" />
-            </svg>
-        </h3>
-        <textarea name="" id="" rows="5"></textarea>
-    </footer>
-</main>
+            <section>
+                <a href="">
+                    <button class="btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="iconoBtn icon icon-tabler icon-tabler-user-plus" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#146C94" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                            <path d="M16 19h6" />
+                            <path d="M19 16v6" />
+                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
+                        </svg>
+                        Nuevo Paciente
+                    </button>
+                </a>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <h3>
+                Pendientes
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil-plus" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#146C94" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+                    <path d="M13.5 6.5l4 4" />
+                    <path d="M16 19h6" />
+                    <path d="M19 16v6" />
+                </svg>
+            </h3>
+            <textarea name="" id="" rows="5"></textarea>
+        </footer>
+    </main>
 
 </body>
 

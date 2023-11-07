@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="es" class="fondo">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Principal</title>
-    <link rel="stylesheet" href="css/paginaPrincipal.css">
-    <link rel="stylesheet" href="css/configuracionGeneral.css"> 
-    <script src="menuHamburguesa.js"></script>
-</head>
-<body >
-    <nav class="navbar">
+<link rel="stylesheet" href="css/barraNavegacion.css">
+<nav class="navbar">
         <div class="hamburger-menu">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -19,7 +9,8 @@
             <li class="nav-item">
                 <strong><img src="img/doctor.png" class="img" alt=""></strong>
                 <ul class="sub-menu">
-                    <li><a href="cerrarPerfil.php">Salir</a></li>
+                    <li><a href="cambiarPerfil.php">Cambiar de Perfil</a></li>
+                    <li><a href="cerrarSesion.php">Cerrar Sesion</a></li>
                 </ul>
             </li>
             <li class="nav-item">
