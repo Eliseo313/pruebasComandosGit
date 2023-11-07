@@ -1,6 +1,7 @@
 <?php
 
 require 'includes/database.php';
+include 'includes/config.php';
 
 $db = conectarBD('pruebaloginbasico');
 
@@ -49,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $licencia = $stmtLicencia->fetch(PDO::FETCH_ASSOC);
 
                 if ($licencia && $licencia['activo'] == 1) {
-                    header('Location: /pruebasComandosGit/perfiles.php');
+                    header('Location:'.$ruta.'/perfiles.php');
                     exit();
                 } else {
                     $errores[] = 'Licencia vencida';

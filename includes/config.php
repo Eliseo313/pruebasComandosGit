@@ -1,3 +1,4 @@
 <?php 
     $contrasena = '';
+    $ruta = '';
 ?>

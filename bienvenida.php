@@ -1,17 +1,18 @@
 <?php
 include('includes/funciones.php');
 include('includes/database2.php');
+include('includes/config.php');
 
 $db = conectarBD2('prueba__cisco_1');
 
 $sesionIniciada = estaAutentincado();
 
 if (!$sesionIniciada ) {
-    header('Location: /');
+    header('Location:'.$ruta.'/');
 }
 
 if($_SESSION['perfil'] == ''){
-    header('Location: /perfiles.php');
+    header('Location:'.$ruta.'/perfiles.php');
 }
 
 $detallesPerfil = obtenerDetallesPerfil($db,$_SESSION['idPerfil']);

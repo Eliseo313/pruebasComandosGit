@@ -1,6 +1,7 @@
 <?php
 require 'includes/database2.php';
 include 'includes/funciones.php';
+include 'includes/config.php';
 
 $auth = estaAutentincado();
 
@@ -42,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['perfil'] = $perfil['nombrePerf'];
                 $_SESSION['idPerfil'] = $perfil['idPerf'];
                 $_SESSION['correoPerfil'] = $perfil['correoPerf'];
-                header('Location: /pruebasComandosGit/bienvenida.php');
+                header('Location:'.$ruta.'/bienvenida.php');
                 exit();
             } else {
                 $errores[] = 'La contraseña es incorrecta';
