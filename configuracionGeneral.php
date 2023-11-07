@@ -1,5 +1,5 @@
 <?php
-    include 'includes/templates/header.php'
+    include 'includes/templates/barraNavegacion.php'
 ?>
 <main>
         <a  class="iconoCerrar" href="paginaPrincipal.php">

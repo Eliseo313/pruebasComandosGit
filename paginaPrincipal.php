@@ -50,7 +50,7 @@ foreach ($citasSemanaActual as $cita) {
     $horario[$horaCita][$diaCita] = $nombrePaciente . ' - ' . $motivoCita;
 }
 
-include 'includes/templates/header.php';
+include 'includes/templates/barraNavegacion.php';
 ?>
 
 <main>

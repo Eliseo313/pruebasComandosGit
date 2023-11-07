@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Principal</title>
     <link rel="stylesheet" href="css/paginaPrincipal.css">
-    <link rel="stylesheet" href="css/configuracionGeneral.css">
+    <link rel="stylesheet" href="css/configuracionGeneral.css"> 
     <script src="menuHamburguesa.js"></script>
 </head>
 <body >
