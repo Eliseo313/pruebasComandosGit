@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $licencia = $stmtLicencia->fetch(PDO::FETCH_ASSOC);
 
                 if ($licencia && $licencia['activo'] == 1) {
-                    header('Location: /perfiles.php');
+                    header('Location: /pruebasComandosGit/perfiles.php');
                     exit();
                 } else {
                     $errores[] = 'Licencia vencida';

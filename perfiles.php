@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['perfil'] = $perfil['nombrePerf'];
                 $_SESSION['idPerfil'] = $perfil['idPerf'];
                 $_SESSION['correoPerfil'] = $perfil['correoPerf'];
-                header('Location: /bienvenida.php');
+                header('Location: /pruebasComandosGit/bienvenida.php');
                 exit();
             } else {
                 $errores[] = 'La contraseña es incorrecta';

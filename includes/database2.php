@@ -3,7 +3,7 @@
 function conectarBD2($nombreBD) {
     $host = 'localhost';
     $usuario = 'root';
-    $contrasena = '';
+    $contrasena = 'root';
     $dsn = "mysql:host=$host;dbname=$nombreBD;charset=utf8";
 
     try {
