@@ -1,9 +1,9 @@
 <?php
-
+require_once('config.php');
 function conectarBD($nombreBD) {
     $host = 'localhost';
     $usuario = 'root';
-    $contrasena = 'root';
+    global $contrasena;
     $dsn = "mysql:host=$host;dbname=$nombreBD;charset=utf8";
 
     try {
