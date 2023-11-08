@@ -107,6 +107,30 @@
                 <p>453-120-09-23</p>
             </div>
         </div>
+        <div class="card">
+            <img class="imgCard" src="img/paciente.png" alt="">
+            <div class="text">
+                <p>Ana Lopez</p>
+                <p>32 años</p>
+                <p>453-120-09-23</p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="imgCard" src="img/paciente.png" alt="">
+            <div class="text">
+                <p>Ana Lopez</p>
+                <p>32 años</p>
+                <p>453-120-09-23</p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="imgCard" src="img/paciente.png" alt="">
+            <div class="text">
+                <p>Ana Lopez</p>
+                <p>32 años</p>
+                <p>453-120-09-23</p>
+            </div>
+        </div>
     </section>
 
     <section>
@@ -128,7 +152,6 @@
             </svg>
         </button>
     </section>
-
 </body>
 
 </html>
