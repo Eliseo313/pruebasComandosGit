@@ -1,4 +1,4 @@
 <?php 
-    $contrasena = '';
-    $ruta = '';
+    $contrasena = 'root';
+    $ruta = '/pruebasComandosGit';
 ?>

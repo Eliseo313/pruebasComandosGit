@@ -7,8 +7,9 @@
         </div>
         <ul class="nav-list">
             <li class="nav-item">
-                <strong><img src="img/doctor.png" class="img" alt=""></strong>
+                <img src="img/doctor.png" class="img" alt="">
                 <ul class="sub-menu">
+                    <li><a href="paginaPrincipal.php">Pagina Principal</a></li>
                     <li><a href="cambiarPerfil.php">Cambiar de Perfil</a></li>
                     <li><a href="cerrarSesion.php">Cerrar Sesion</a></li>
                 </ul>
@@ -23,7 +24,7 @@
             <li class="nav-item">
                 <strong>Pacientes</strong>
                 <ul class="sub-menu">
-                    <li><a href="">Archivos de Pacientes</a></li>
+                    <li><a href="pacientes.php">Archivos de Pacientes</a></li>
                     <li><a href="">Nuevo Paciente</a></li>
                     <li><a href="">Antecedentes</a></li>
                 </ul>

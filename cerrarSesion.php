@@ -1,4 +1,4 @@
 <?php
 $_SESSION = [];
-header('Location: /index.php');
+header('Location: /pruebasComandosGit/index.php');
 ?>

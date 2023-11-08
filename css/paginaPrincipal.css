@@ -3,13 +3,8 @@
     padding: 0;
 }
 .fondo{
-    background: linear-gradient(360deg, #AFD3E2 0%, #F6F1F1 80%);
-    overflow: hidden; /* Ocultar scroll */
+    background: linear-gradient(360deg, #AFD3E2 0%, #F6F1F1 80%);   
 }
-main{
-    height: 100vh; /* 100% de la altura de la ventana */
-}
-
 
 /* AQUI EMPIEZAN LOS ESTILOS PARA EL CUERPO */
 .citas{

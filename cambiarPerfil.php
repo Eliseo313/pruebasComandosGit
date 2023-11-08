@@ -2,5 +2,5 @@
 $_SESSION['perfil'] = '';
 $_SESSION['idPerfil'] = '';
 $_SESSION['correoPerfil'] = '';
-header('Location: /perfiles.php');
+header('Location: /pruebasComandosGit/perfiles.php');
 ?>
